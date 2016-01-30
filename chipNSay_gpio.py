@@ -60,4 +60,4 @@ class GPIO:
         for pinObject in self.pins:
             cmd = "echo " + str(pinObject[0]) + " > /sys/class/gpio/unexport"
             subprocess.Popen(cmd,shell=True, stdout=subprocess.PIPE)
-            self.pins = None
+        self.pins = None
